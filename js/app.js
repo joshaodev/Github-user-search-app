@@ -72,6 +72,7 @@ async function searchUser(ev) {
         return userNotFound()
     }
     
+    UserFound()
     setGithubUser(githubUser)
     usernameInput.value = ''
 
