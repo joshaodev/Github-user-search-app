@@ -5,7 +5,7 @@ const divUser = document.querySelector('.user')
 const divNotFound = document.createElement('div')
 
 const profileImg = document.querySelector('#user-profile-img')
-const gituser = document.querySelector('#user')
+const gituser = document.querySelector('#gituser')
 const dateJoined = document.querySelector('#user-github-join-date')
 const profileUsername = document.querySelector('#github-username')
 const bio = document.querySelector('#user-bio')
