@@ -5,7 +5,7 @@ const divUser = document.querySelector('.user')
 const divNotFound = document.createElement('div')
 
 const profileImg = document.querySelector('#user-profile-img')
-const user = document.querySelector('#user')
+const gituser = document.querySelector('#user')
 const dateJoined = document.querySelector('#user-github-join-date')
 const profileUsername = document.querySelector('#github-username')
 const bio = document.querySelector('#user-bio')
@@ -26,7 +26,7 @@ function convertDate(dateString) {
 
 function setGithubUser(user) {
     profileImg.src= user.avatar_url
-    user.textContent = user.name
+    gituser.textContent = user.name
     dateJoined.textContent = 'Joined '+ convertDate(user.created_at)
     profileUsername.textContent = user.login
     profileUsername.setAttribute('href', user.html_url)
