@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap');
+
+:root {
+    --bg1-color: #141c2f;
+    --bg2-color: #1f2a48;
+    --bg3-color: #0079fe;
+    --text1-color: #ffffff;
+    --text2-color: #d6dae4;
+    --text3-color: #0566d6;
+    --white-color: #ffffff;
+    --placeholder-color: #aaa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Space Grotesk', monospace, sans-serif;
+}
+
+body {
+    background-color: var(--bg1-color);
+    color: var(--text1-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+.container,
+.header,
+.toggle-theme,
+.form,
+.user,
+.not-found,
+.user-right,
+.github-user,
+.user-info div,
+.repo-info,
+.repo-info div {
+    display: flex;
+}
+
+.container,
+.user-right,
+.github-user,
+.repo-info div {
+    flex-direction: column;
+}
+
+.form,
+.form button[type=submit],
+.user,
+.repo-info {
+    border-radius: 5px;
+}
+
+.form input[type=text], 
+.form button[type=submit] {
+    height: 30px;
+    border: none;
+    outline: none;
+}
+
+.container {
+    width: 500px;
+    max-width: 90%;
+    margin: 10% auto;
+}
+
+.header {
+    justify-content: space-between;
+    align-items: center;
+    padding: .3em;
+    background-color: transparent;
+}
+
+.logo {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: var(--text1-color);
+}
+
+/* TOGGLE */
+.toggle-theme {
+    align-items: center;
+}
+
+.toggle-theme input[type=checkbox] {
+    visibility: hidden;
+}
+
+.toggle-bg {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 19px;
+    background-color: var(--bg2-color);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.toggle-indicator {
+    position: absolute;
+    top: 2px;
+    left: 4px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: var(--bg1-color);
+    border-radius: 50%;
+}
+
+.toggle-theme input[type=checkbox]:checked + .toggle-bg {
+    background-color: var(--text1-color);
+}
+
+.toggle-theme input[type=checkbox]:checked + .toggle-bg .toggle-indicator {
+    transform: translateX(140%);
+}
+
+/*========================*/
+.form {
+    align-items: center;
+    margin: 1em 0;
+    padding: .3em;
+    background-color: var(--bg2-color);
+}
+
+.form i {
+    font-size: 1em;
+    margin-left: .4em;
+    color: var(--text3-color);
+}
+
+.form input[type=text] {
+    flex-grow: 1;
+    font-size: .9em;
+    padding: 0 .8em;
+    background-color: transparent;
+    color: var(--text1-color);
+}
+
+.form input[type=text]::placeholder {
+    color: var(--placeholder-color);
+}
+
+.form button[type=submit] {
+    padding: 0 1em;
+    background-color: var(--bg3-color);
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+.user {
+    width: 100%;
+    padding: 1.5em;
+    background-color: var(--bg2-color);
+}
+
+.user-left {
+    width: 25%;
+}
+
+#user-profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+#user {
+    font-size: 1.3em;
+}
+
+#user-github-join-date {
+    font-size: .8em;
+    margin-top: .5em;
+    color: var(--text2-color);
+}
+
+#github-username {
+    font-size: .8em;
+    color: var(--text3-color);
+}
+
+#user-bio {
+    font-size: .8em;
+    margin-top: 1em;
+    color: var(--text1-color);
+}
+
+.user-right {
+    width: 75%;
+}
+
+.user-info div {
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.github-user {
+    text-align: left;
+}
+
+.repo-info {
+    justify-content: space-evenly;
+    margin: 1em 0;
+    background-color: var(--bg1-color);
+}
+
+.repo-info div {
+    padding: .3em 0;
+}
+
+.repo-info div span:nth-child(1n) {
+    color: var(--text2-color);
+}
+
+.repo-info div span:nth-child(2n) {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--text1-color);
+}
+
+.user-links {
+    display: grid;
+    grid-template-columns: 1fr 150px;
+    grid-row-gap: 10px;
+}
+
+.user-links i {
+    font-size: .8em;
+}
+
+.user-links span,
+.user-links a {
+    font-size: .8em;
+    margin-left: .1em;
+    color: var(--text1-color);
+}
+
+/* Style for user not found*/
+.not-found {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1.5em;
+    background-color: var(--bg2-color);
+}
+
+.not-found img {
+    width: 70%;
+}
+
+
+/* Mobile Version */
+@media screen and (max-width: 550px) {
+    .user,
+    .base-info{
+        flex-direction: column;
+    }
+
+    .user {
+        margin-bottom: 1em;
+    }
+
+    .user-left,
+    .user-right {
+        width: 100%;
+    }
+
+    .user-left {
+        text-align: center;
+    }
+
+    .user-links {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .form,
+    .repo-info {
+        flex-direction: column;
+    }
+
+    .form i {
+        display: none;
+    }
+
+    #username-input,
+    .form button {
+        width: 100%;
+    }
+
+    .repo-info div {
+        text-align: center;
+    }
+
+}

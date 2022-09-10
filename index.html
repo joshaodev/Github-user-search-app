@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>GitHub Users</title>
+ 
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./icons/bootstrap-icons.css">
+
+    <script src="./js/changeTheme.js" defer></script>
+    <script src="./js/app.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <header class="header">
+            <a href="./index.html" class="logo">devfinder</a>
+            <div class="toggle-theme">
+                <input type="checkbox" name="toggle" id="toggle">
+                <label for="toggle" class="toggle-bg">
+                    <span class="toggle-indicator"></span>
+                </label>
+            </div>
+        </header>
+        <form action="." method="get" class="form">
+            <i class="bi bi-search"></i>
+            <input type="text" name="username" id="username-input" placeholder="Search GitHub username...">
+            <button type="submit">Search</button>
+        </form>
+        <div class="user">
+            <div class="user-left">
+                <img src="./img/the_octocat.png" alt="Profile Photo" id="user-profile-img">
+            </div>
+            <div class="user-right">
+                <div class="user-info">
+                    <div class="base-info">
+                        <div class="github-user">
+                            <span id="user">The Octocat</span>
+                            <a href="" target="_blank" id="github-username">@octocat</a>
+                        </div>
+                        <span id="user-github-join-date">Joined 28 Jan 2020</span>
+                    </div>
+                    <p id="user-bio">This profile has no bio</p>
+                </div>
+                <div class="repo-info">
+                    <div>
+                        <span>Repos</span>
+                        <span id="repos">8</span>
+                    </div>
+                    <div>
+                        <span>Followers</span>
+                        <span id="followers">3938</span>
+                    </div>
+                    <div>
+                        <span>Following</span>
+                        <span id="following">9</span>
+                    </div>
+                </div>
+                <div class="user-links">
+                    <div>
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span id="user-location">San Francisco</span>
+                    </div>
+                    <div>
+                        <i class="bi bi-twitter"></i>
+                        <span id="user-twitter">Not Available</span>
+                    </div>
+                    <div>
+                        <i class="bi bi-link-45deg"></i>
+                        <a href="https://github.blog" target="_blank" id="user-blog">https://github.blog</a>
+                    </div>
+                    <div>
+                        <i class="bi bi-building"></i>
+                        <span id="user-company">@github</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
