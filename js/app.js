@@ -17,11 +17,17 @@ const twitter = document.querySelector('#user-twitter')
 const blog = document.querySelector('#user-blog')
 const company = document.querySelector('#user-company')
 
+function convertDate(dateString) {
+    const date = new Date(dateString)
+    const dateFormated = date.toDateString() // Return date string in format 'Tue Feb 10 2015'
+    const dateParts = dateFormated.split(' ')
+    return dateParts[2] +' '+ dateParts[1] +' '+dateParts[3]
+}
 
 function setGithubUser(user) {
     profileImg.src= user.avatar_url
     user.textContent = user.name
-    dateJoined.textContent = user.created_at
+    dateJoined.textContent = 'Joined '+ convertDate(user.created_at)
     profileUsername.textContent = user.login
     profileUsername.setAttribute('href', user.html_url)
     repos.textContent = user.public_repos
